@@ -21,8 +21,7 @@ import android.widget.TextView;
  * @author myheat
  */
 public class MainActivity extends Activity {
-	DataWatcher a;
-
+	
 	DataWatcher mDataWatcher = new DataWatcher() {
 
 		@Override
