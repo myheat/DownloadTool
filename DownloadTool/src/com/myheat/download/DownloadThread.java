@@ -22,6 +22,7 @@ public class DownloadThread extends Thread {
 	private static final int IO_BUFFER_SIZE = 4 * 1024;
     /** 下载实例对象*/
 	private DownloadEntry entry;
+	/** 数据块*/
 	private int blocks;
 	/** 下载起始位置*/
 	private int index;
@@ -48,8 +49,8 @@ public class DownloadThread extends Thread {
 		this.entry = entry;
 		
 		this.downloadedLength = entry.getDownloadedData().get(index);
-		startPosition = index * blocks + downloadedLength;
-		endPosition = (index + 1) * blocks - 1;
+		startPosition = index * this.blocks + downloadedLength;
+		endPosition = (index + 1) * this.blocks - 1;
 	}
 
 	@Override
@@ -123,7 +124,10 @@ public class DownloadThread extends Thread {
 	public boolean isCompleted() {
 		return isCompleted;
 	}
-	
+	/**
+	 * 是否网络错误
+	 * @return
+	 */
 	public boolean isNetError(){
 		return isNetError;
 	}
