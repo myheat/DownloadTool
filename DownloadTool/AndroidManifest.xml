@@ -28,7 +28,7 @@
         </activity>
         <service android:name="com.myheat.download.DownloadService">
             
-            </service>
+        </service>
             
     </application>
 
