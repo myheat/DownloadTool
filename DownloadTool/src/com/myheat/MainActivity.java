@@ -1,15 +1,12 @@
 package com.myheat;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map.Entry;
-
 import com.myheat.download.DataWatcher;
 import com.myheat.download.DownloadManager;
 import com.myheat.entities.DownloadEntry;
 import com.myheat.utils.DebugLog;
 import com.myheat.utils.FileUtils;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
