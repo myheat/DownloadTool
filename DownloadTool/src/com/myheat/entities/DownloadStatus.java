@@ -1,6 +1,7 @@
 package com.myheat.entities;
 /**
  * @author myheat
+ * 下载状态
  */
 public enum DownloadStatus {
 
